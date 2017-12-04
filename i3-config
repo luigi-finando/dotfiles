@@ -31,11 +31,11 @@ bindsym $mod+q exec rxvt-unicode -e calcurse
 bindsym $mod+t exec transmission-daemon && rxvt-unicode -e ~/bin/tremc/tremc
 bindsym $mod+Shift+t exec killall transmission-daemon
 
-bindsym $mod+r exec --no-startup-id /home/luis/bin/scripts/i3-info.sh
+bindsym $mod+r exec --no-startup-id $HOME/bin/scripts/i3-info.sh
 bindsym $mod+Shift+r exec rxvt-unicode -e htop
 
 bindsym $mod+a exec mupdf -r 72 -C "fffaf0" ~/Tese/tese_main.pdf
-bindsym $mod+Shift+a exec /home/luis/bin/compilartese.sh
+bindsym $mod+Shift+a exec $HOME/bin/compilartese.sh
 
 bindsym $mod+Return exec rxvt-unicode
 bindsym $mod+Shift+Return exec --no-startup-id dmenu_run -c -lr 2 -d 0.3 -l 3 -fn 'Monaco-7' -sb '#ffff88' -sf '#000000'
@@ -58,8 +58,8 @@ bindsym $mod+XF86MonBrightnessUp exec xbacklight -set 100
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym $mod+XF86MonBrightnessDown exec xbacklight -set 0
 
-bindsym Print exec --no-startup-id ~/bin/scripts/scrot/scrotsave.sh
-bindsym $mod+Print exec --no-startup-id ~/bin/scripts/scrot/scrotsaveselection.sh
+bindsym Print exec --no-startup-id $HOME/bin/scripts/scrot/scrotsave.sh
+bindsym $mod+Print exec --no-startup-id $HOME/bin/scripts/scrot/scrotsaveselection.sh
 
 ### Default window states and workspaces
 assign [class="(?i)geary"]  email
@@ -210,7 +210,7 @@ client.background       #ffffff
 bar {
         position bottom
 	height 23
-	status_command ~/bin/mpd-i3status.sh
+	status_command $HOME/dotfiles/i3scripts/custom-i3status.sh
 	colors {
        		background #000000
        		statusline #ffff88

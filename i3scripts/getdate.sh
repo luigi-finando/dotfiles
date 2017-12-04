@@ -9,6 +9,10 @@ else
 	dayoutput=$day
 fi
 
+#echo $day
+#echo $daytemp
+#echo $dayoutput
+
 if (( day == 1 )); then
 		ordinal=st
 elif (( day == 2 )); then
