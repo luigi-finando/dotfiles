@@ -1,6 +1,6 @@
-# Perosonal dotfiles
+# Personal dotfiles
 
-Almost all are close to stock, but it is good to keep a backup
+Just for backup, nothing special
 
 - i3 and dwm, including some scripts for system info
 - mpd, ncmpcpp
