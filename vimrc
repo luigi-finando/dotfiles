@@ -67,6 +67,11 @@ let g:goyo_linenr = 0
 
 "remaps all
 
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+nmap <C-h> <C-w>h
+
 "AltGr+g
 nmap ŋ :Goyo<CR>
 imap ŋ <Esc>:Goyo<CR>i
@@ -124,7 +129,7 @@ autocmd Filetype tex inoremap ;i \textit{}<++><Esc>4hi
 autocmd Filetype tex nnoremap <leader>i bi\textit{<Esc>ea}
 
 autocmd Filetype tex inoremap ;e \emph{}<++><Esc>4hi
-autocmd Filetype tex inoremap <leader>e b\emph{<Esc>ea}
+autocmd Filetype tex nnoremap <leader>e b\emph{<Esc>ea}
 
 autocmd Filetype tex nnoremap <leader>g i\gls{<Esc>eli}<Esc>
 autocmd Filetype tex nnoremap <leader>l i\glslink{<++>}{<Esc>eli}<Esc>2F{i
@@ -132,10 +137,12 @@ autocmd Filetype tex nnoremap <leader>h i\newglossaryentry{<++>}{name=<++>,descr
 autocmd Filetype tex nnoremap <leader>c i\begin{center}<Enter><++><Enter>\end{center}<Enter><++><Esc>3kF\i
 autocmd Filetype tex nnoremap <leader>p i\begin{poem}{}{}{}<Enter><++><Enter>\end{poem}<Enter><++><Esc>3kF\i
 autocmd FileType tex nnoremap <leader>v i\begin{verse}<Enter><++><Enter>\end{verse}<Enter><++><Esc>3kF\i
+autocmd FileType tex nnoremap © i\vspace{12pt}\begin{adjustwidth}{4cm}{}<Enter>{\small{\setstretch{0.5}<Enter>.<Enter>\cite[p. <++>]{<++>}\par}}<Enter>\end{adjustwidth}\vspace{12pt}<Esc>2k0xxli
+
 
 ""html
 autocmd FileType html nnoremap <leader>h1 i<h1></h1><++><Esc>2F<
 autocmd FileType html nnoremap <leader>p i<p></p><++><Esc>2F<
-autocmd FileType html nnoremap <leader>br i<br></br><++><Esc>2F<
+autocmd FileType html nnoremap <leader>br i</br><Esc>
 autocmd FileType html nnoremap <leader>b i<bold></bold><++><Esc>2F<
 

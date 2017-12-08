@@ -163,7 +163,7 @@ bindsym $mod+j resize shrink height 5 px or 5 ppt
 gaps inner 6
 gaps outer 4
 
-#work mode
+#work mode :)
 bindsym $mod+y bar mode hide; border none;  gaps outer all set 0; gaps inner all set 0
 bindsym $mod+Shift+y bar mode dock; border pixel 3; gaps outer all set 5; gaps inner all set 5
 
@@ -208,7 +208,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 bar {
-        position bottom
+        position top
 	height 23
 	status_command $HOME/dotfiles/i3scripts/custom-i3status.sh
 	colors {
