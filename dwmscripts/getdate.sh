@@ -3,12 +3,6 @@
 daytemp="$(date +"%d")"
 day=$(echo "${daytemp: -1}")
 
-if [[ "daytemp" -gt 10 ]]; then
-	dayoutput=$daytemp
-else
-	dayoutput=$day
-fi
-
 if (( day == 1 )); then
 		ordinal=st
 elif (( day == 2 )); then
@@ -19,4 +13,4 @@ else
 		ordinal=th
 fi
 
-echo "$(date +'%A, %B ')$dayoutput$ordinal - $(date +'%H:%M')"
+echo "$(date +'%A, %B %d')$ordinal - $(date +'%H:%M')"

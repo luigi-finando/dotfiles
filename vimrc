@@ -35,13 +35,13 @@ syntax on
 set list listchars=tab:→\ ,eol:¬,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 
 set background=dark
-colorscheme CandyPaper 
+colorscheme colorsbox-stbright 
 
 map <F5> :setlocal spell! spelllang=pt<CR>
 
 let g:tex_flavor = "latex"
 ""vim airline
-let g:airline_theme='term'
+let g:airline_theme='base16'
 
 ""vim markdown-=preview
 let g:vim_markdown_no_default_key_mappings = 0
@@ -51,10 +51,9 @@ let g:vim_markdown_folding_disabled = 1
 let g:livepreview_previewer = 'mupdf'
 
 ""vim mardown
-let vim_markdown_preview_browser='Chromium'
 let vim_markdown_preview_pandoc=1
 
-"goyo e limelight
+"goyo and limelight
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
@@ -62,9 +61,7 @@ let g:goyo_width = 120
 let g:goyo_height = 85
 let g:goyo_linenr = 0
 
-
-"let g:limelight_conceal_ctermfg = 1
-
+let g:limelight_conceal_ctermfg = 'gray'
 "remaps all
 
 nmap <C-j> <C-w>j
@@ -105,7 +102,7 @@ inoremap ;" ""<Esc>i
 
 """bib files
 
-autocmd FileType bib colorscheme DevC++
+"autocmd FileType bib colorscheme colorsbox-stbright
 "AltGr + i
 autocmd Filetype bib nnoremap ² /@<CR>
 autocmd Filetype bib inoremap ² <Esc>/@<CR>
@@ -115,7 +112,7 @@ autocmd Filetype bib inoremap ;= ="",<Esc>F"i
 
 "tex files
 
-autocmd FileType tex colorscheme jellyx
+"autocmd FileType tex colorscheme jellyx
 
 autocmd FileType tex inoremap ;a <Esc>:/begin{document}<Enter>2ki
 

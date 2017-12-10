@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:Monofur 10
+font pango:Monaco 7
 
 ### startup ###
 exec --no-startup-id xrdb -merge ~/.Xresources
@@ -19,26 +19,27 @@ exec --no-startup-id geary --hidden
 exec --no-startup-id notify-send -t 0 "$(fortune -s -o)"
 
 ### Launchers ### q w e r t / a s d f g ###
+
+bindsym $mod+Return exec rxvt-unicode
+bindsym $mod+Shift+Return exec --no-startup-id dmenu_run -c -lr 2 -d 0.3 -l 3 -fn 'Monaco-7' -sb '#ffff88' -sf '#000000'
+
+bindsym $mod+Shift+q exec geary; workspace email
+bindsym $mod+q exec rxvt-unicode -e calcurse
+
 bindsym $mod+w exec --no-startup-id firefox
 bindsym $mod+Shift+w exec --no-startup-id vivaldi -force-device-scale-factor=1.2
 
 bindsym $mod+e exec --no-startup-id rxvt-unicode -e ranger
 bindsym $mod+Shift+e exec --no-startup-id thunar
 
-bindsym $mod+Shift+q exec geary; workspace email
-bindsym $mod+q exec rxvt-unicode -e calcurse
+bindsym $mod+r exec --no-startup-id $HOME/bin/scripts/i3-info.sh
+bindsym $mod+Shift+r exec rxvt-unicode -e htop
 
 bindsym $mod+t exec transmission-daemon && rxvt-unicode -e ~/bin/tremc/tremc
 bindsym $mod+Shift+t exec killall transmission-daemon
 
-bindsym $mod+r exec --no-startup-id $HOME/bin/scripts/i3-info.sh
-bindsym $mod+Shift+r exec rxvt-unicode -e htop
-
 bindsym $mod+a exec mupdf -r 72 -C "fffaf0" ~/Tese/tese_main.pdf
 bindsym $mod+Shift+a exec $HOME/bin/compilartese.sh
-
-bindsym $mod+Return exec rxvt-unicode
-bindsym $mod+Shift+Return exec --no-startup-id dmenu_run -c -lr 2 -d 0.3 -l 3 -fn 'Monaco-7' -sb '#ffff88' -sf '#000000'
 
 ### XF86 keys
 bindsym $mod+XF86AudioPlay exec rxvt-unicode -e ncmpcpp
