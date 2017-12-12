@@ -2,7 +2,7 @@
 # I made this to help me with my Latex PHD thesis, it shows how my working directory differs from remote repository
 
 function prompt_char {
-  git branch >/dev/null 2>/dev/null && echo "%{$FG[093]%}╄╅┭" && return
+  git branch >/dev/null 2>/dev/null && echo "%{$FG[100]%}╄╅┭" && return
   echo '┧'
 }
 #tex file without extension
@@ -58,8 +58,8 @@ ZSH_THEME_GIT_COMMITS_BEHIND_PREFIX="%{$FG[023]%} | files to fetch: "
 ZSH_THEME_GIT_COMMITS_BEHIND_SUFFIX="%{$FG[023]%} |"
 
 #Paste this line in the middle to have the Latex prompt
-#%{$FG[029]%}║╂┢%{$reset_color%}%{$FG[078]%}╪${latex_prompt}
+#%{$FG[244]%}║╂┢╪${latex_prompt}
 
-PROMPT="%{$FG[188]%}┏┮══%{$reset_color%} %{$FG[239]%}in%{$reset_color%} %{$terminfo[bold]$FG[130]%}${current_dir}%{$reset_color%}${git_info}%{$reset_color%}
-%{$FG[188]%}╘━━%{$reset_color%}${prompt_char}%{$reset_color%} "
+PROMPT="%{$FG[015]%}┏┮══%{$reset_color%} %{$FG[239]%}in%{$reset_color%} %{$terminfo[bold]$FG[130]%}${current_dir}%{$reset_color%}${git_info}%{$reset_color%}
+%{$FG[015]%}╘━━%{$reset_color%}${prompt_char}%{$reset_color%} "
 

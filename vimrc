@@ -20,6 +20,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'terryma/vim-multiple-cursors'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -63,6 +64,9 @@ let g:goyo_linenr = 0
 
 let g:limelight_conceal_ctermfg = 'gray'
 "remaps all
+
+"removes 'xx' as delete fold
+nnoremap <expr> x ((foldclosed('.')==-1)?('x'):('zx'))
 
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
@@ -134,8 +138,11 @@ autocmd Filetype tex nnoremap <leader>h i\newglossaryentry{<++>}{name=<++>,descr
 autocmd Filetype tex nnoremap <leader>c i\begin{center}<Enter><++><Enter>\end{center}<Enter><++><Esc>3kF\i
 autocmd Filetype tex nnoremap <leader>p i\begin{poem}{}{}{}<Enter><++><Enter>\end{poem}<Enter><++><Esc>3kF\i
 autocmd FileType tex nnoremap <leader>v i\begin{verse}<Enter><++><Enter>\end{verse}<Enter><++><Esc>3kF\i
-autocmd FileType tex nnoremap © i\vspace{12pt}\begin{adjustwidth}{4cm}{}<Enter>{\small{\setstretch{0.5}<Enter>.<Enter>\cite[p. <++>]{<++>}\par}}<Enter>\end{adjustwidth}\vspace{12pt}<Esc>2k0xxli
 
+autocmd FileType tex nnoremap © i\vspace{24pt}\begin{adjustwidth}{4cm}{}<Enter>{\small{\setstretch{0.5}<Enter>.<Enter>\cite[p. <++>]{<++>}\par}}<Enter>\end{adjustwidth}\vspace{24pt}<Esc>2k0xxli
+
+autocmd FileType tex nnoremap ® i\begin{envromance}<Enter><++><Enter>\end{envromance}<Esc>kF<
+autocmd FileType tex nnoremap ®n i\begin{envromance*}[<++>]<Enter><++><Enter>\end{envromance*}<Esc>2k0
 
 ""html
 autocmd FileType html nnoremap <leader>h1 i<h1></h1><++><Esc>2F<

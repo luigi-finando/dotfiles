@@ -1,7 +1,12 @@
 #!/bin/bash
 
 daytemp="$(date +"%d")"
-day=$(echo "${daytemp: -1}")
+
+if (($daytemp == 11|12|13));then
+	day=$daytemp
+else
+	day=$(echo "${daytemp: -1}")
+fi
 
 if (( day == 1 )); then
 		ordinal=st
