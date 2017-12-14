@@ -213,13 +213,13 @@ bar {
 	height 23
 	status_command $HOME/dotfiles/i3scripts/custom-i3status.sh
 	colors {
-       		background #000000
+       		background #292c2e
        		statusline #ffff88
         	separator #666666
 
         	focused_workspace  #ffff88 #ffff88 #000000
         	active_workspace   #333333 #5f676a #ffffff
-        	inactive_workspace #333333 #222222 #888888
+        	inactive_workspace #292c2e #292c2e #ffff88
         	urgent_workspace   #2f343a #900000 #ffffff
         	binding_mode       #2f343a #900000 #ffffff
     }
