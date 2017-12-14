@@ -1,0 +1,13 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); 
+
+tab:not([selected=”true”]) {
+	background-color: #121212 !important;
+	color: #ffffd7 !important; 
+}
+
+#urlbar {
+      border-style: none !important;
+      background-color: #121212 !important;
+      color: #ffffd7 !important;
+      text-align: center;
+}

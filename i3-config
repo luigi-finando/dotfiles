@@ -38,15 +38,15 @@ bindsym $mod+Shift+r exec rxvt-unicode -e htop
 bindsym $mod+t exec transmission-daemon && rxvt-unicode -e ~/bin/tremc/tremc
 bindsym $mod+Shift+t exec killall transmission-daemon
 
-bindsym $mod+a exec mupdf -r 72 -C "fffaf0" ~/Tese/tese_main.pdf
+bindsym $mod+a exec mupdf -r 80 -C "fffaf0" ~/Tese/tese_main.pdf
 bindsym $mod+Shift+a exec $HOME/bin/compilartese.sh
 
 ### XF86 keys
-bindsym $mod+XF86AudioPlay exec rxvt-unicode -e ncmpcpp
-bindsym $mod+Shift+XF86AudioPlay exec mpc stop
-bindsym XF86AudioPlay exec mpc toggle
-bindsym XF86AudioPrev exec mpc prev
-bindsym XF86AudioNext exec mpc next
+bindsym $mod+XF86AudioPlay exec --no-startup-id rxvt-unicode -e ncmpcpp
+bindsym $mod+Shift+XF86AudioPlay exec --no-startup-id mpc stop
+bindsym XF86AudioPlay exec --no-startup-id mpc toggle
+bindsym XF86AudioPrev exec --no-startup-id mpc prev
+bindsym XF86AudioNext exec --no-startup-id mpc next
 
 bindsym XF86AudioMute exec amixer -D pulse sset Master toggle
 bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%-
