@@ -60,6 +60,6 @@ ZSH_THEME_GIT_COMMITS_BEHIND_SUFFIX="%{$FG[023]%} |"
 #Paste this line in the middle to have the Latex prompt
 #%{$FG[244]%}║╂┢╪${latex_prompt}
 
-PROMPT="%{$FG[015]%}┏┮══%{$reset_color%} %{$FG[239]%}in%{$reset_color%} %{$terminfo[bold]$FG[130]%}${current_dir}%{$reset_color%}${git_info}%{$reset_color%}
+PROMPT="%{$FG[015]%}┏┮══%{$reset_color%} %{$FG[007]%}in%{$reset_color%} %{$terminfo[bold]$FG[130]%}${current_dir}%{$reset_color%}${git_info}%{$reset_color%}
 %{$FG[015]%}╘━━%{$reset_color%}${prompt_char}%{$reset_color%} "
 
