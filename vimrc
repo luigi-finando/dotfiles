@@ -63,6 +63,11 @@ let g:goyo_height = 85
 let g:goyo_linenr = 0
 
 let g:limelight_conceal_ctermfg = 'gray'
+
+"indentation
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype css setlocal ts=2 sw=2 expandtab
+
 "remaps all
 
 "removes 'xx' as delete fold
