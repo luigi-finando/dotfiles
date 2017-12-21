@@ -213,7 +213,7 @@ bar {
 	height 23
 	status_command $HOME/dotfiles/i3scripts/custom-i3status.sh
 	colors {
-       		background #292c2e
+       		background #292c2e 
        		statusline #ffff88
         	separator #666666
 
