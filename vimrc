@@ -23,6 +23,7 @@ Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'posva/vim-vue'
 Plugin 'sirver/UltiSnips'
+Plugin 'tpope/vim-rails'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -72,8 +73,7 @@ let g:goyo_linenr = 0
 "let g:limelight_conceal_ctermfg = 'gray'
 
 "indentation
-au BufNewFile,BufRead *.erb set filetype=erb
-autocmd Filetype erb setlocal ts=2 sw=2 expandtab
+au BufNewFile,BufRead *.erb set filetype=html
 au BufNewFile,BufRead *.vue set filetype=vue
 autocmd Filetype vue setlocal ts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
@@ -180,10 +180,5 @@ autocmd FileType html nnoremap <leader>b i<bold></bold><++><Esc>2F<
 autocmd FileType html nnoremap <leader>d i<div></div><++><Esc>2F<
 
 ""erb ruby
-autocmd FileType erb nnoremap <leader>h1 i<h1></h1><Esc>2F<i
-autocmd FileType erb nnoremap <leader>< i<%%><Esc>F2%ri
-autocmd FileType erb nnoremap <leader>br i</br><Esc>
-autocmd FileType erb nnoremap <leader>b i<bold></bold><++><Esc>2F<
-
-autocmd FileType erb nnoremap <leader><% i<%<Space>%><Esc>F%
-autocmd FileType erb nnoremap <leader><= i<%=<Space>%><Esc>F%
+autocmd FileType html nnoremap <leader><% i<%<Space>%><Esc>F%
+autocmd FileType html nnoremap <leader><= i<%=<Space>%><Esc>F%
