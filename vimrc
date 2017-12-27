@@ -77,6 +77,7 @@ autocmd Filetype erb setlocal ts=2 sw=2 expandtab
 au BufNewFile,BufRead *.vue set filetype=vue
 autocmd Filetype vue setlocal ts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype html.erb setlocal ts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
 
 "remaps all
@@ -178,9 +179,9 @@ autocmd FileType html nnoremap <leader>br i</br><Esc>
 autocmd FileType html nnoremap <leader>b i<bold></bold><++><Esc>2F<
 autocmd FileType html nnoremap <leader>d i<div></div><++><Esc>2F<
 
-""erb
-autocmd FileType erb nnoremap <leader>h1 i<h1></h1><++><Esc>2F<
-autocmd FileType erb nnoremap <leader>p i<p></p><++><Esc>2F<
+""erb ruby
+autocmd FileType erb nnoremap <leader>h1 i<h1></h1><Esc>2F<i
+autocmd FileType erb nnoremap <leader>< i<%%><Esc>F2%ri
 autocmd FileType erb nnoremap <leader>br i</br><Esc>
 autocmd FileType erb nnoremap <leader>b i<bold></bold><++><Esc>2F<
 
