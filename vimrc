@@ -22,6 +22,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'posva/vim-vue'
+Plugin 'sirver/UltiSnips'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -37,11 +38,16 @@ syntax on
 set list listchars=tab:→\ ,eol:¬,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 
 set background=dark
-colorscheme colorsbox-stbright 
+colorscheme feral
 
 map <F5> :setlocal spell! spelllang=pt<CR>
 
 let g:tex_flavor = "latex"
+""snippet (nao sei usar)
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 ""vim airline
 let g:airline_theme='base16'
 
@@ -63,11 +69,13 @@ let g:goyo_width = 120
 let g:goyo_height = 85
 let g:goyo_linenr = 0
 
-let g:limelight_conceal_ctermfg = 'gray'
+"let g:limelight_conceal_ctermfg = 'gray'
 
 "indentation
 au BufNewFile,BufRead *.erb set filetype=erb
 autocmd Filetype erb setlocal ts=2 sw=2 expandtab
+au BufNewFile,BufRead *.vue set filetype=vue
+autocmd Filetype vue setlocal ts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
 
@@ -100,10 +108,10 @@ nnoremap <leader>; /<++><Enter>"_c4l
 inoremap ;; <Esc>/<++><Enter>"_c4l
 
 "general text remaps
-nnoremap <leader>{ i{}<Esc>i
+nnoremap <leader>{ bi{<Esc>ea}<Esc>
 inoremap ;{ {}<Esc>i
 
-nnoremap <leader>[ i[]<Esc>i
+nnoremap <leader>[ bi[<Esc>ea]<Esc>
 inoremap ;[ []<Esc>i
 
 nnoremap <leader>( bi(<Esc>ea)
@@ -129,8 +137,6 @@ autocmd Filetype bib nnoremap <leader>= i="",<Esc>F"i
 autocmd Filetype bib inoremap ;= ="",<Esc>F"i
 
 "tex files
-
-"autocmd FileType tex colorscheme jellyx
 
 autocmd FileType tex inoremap ;a <Esc>:/begin{document}<Enter>2ki
 
@@ -158,11 +164,19 @@ autocmd FileType tex nnoremap © i\vspace{24pt}\begin{adjustwidth}{4cm}{}<Enter>
 autocmd FileType tex nnoremap ® i\begin{envromance}<Enter><++><Enter>\end{envromance}<Esc>kF<
 autocmd FileType tex nnoremap ®n i\begin{envromance*}[<++>]<Enter><++><Enter>\end{envromance*}<Esc>2k0
 
+""vue
+autocmd FileType vue nnoremap <leader>h1 i<h1></h1><++><Esc>2F<
+autocmd FileType vue nnoremap <leader>p i<p></p><++><Esc>2F<
+autocmd FileType vue nnoremap <leader>br i</br><Esc>
+autocmd FileType vue nnoremap <leader>b i<bold></bold><++><Esc>2F<
+autocmd FileType vue nnoremap <leader>d i<div></div><++><Esc>2F<
+
 ""html
 autocmd FileType html nnoremap <leader>h1 i<h1></h1><++><Esc>2F<
 autocmd FileType html nnoremap <leader>p i<p></p><++><Esc>2F<
 autocmd FileType html nnoremap <leader>br i</br><Esc>
 autocmd FileType html nnoremap <leader>b i<bold></bold><++><Esc>2F<
+autocmd FileType html nnoremap <leader>d i<div></div><++><Esc>2F<
 
 ""erb
 autocmd FileType erb nnoremap <leader>h1 i<h1></h1><++><Esc>2F<
