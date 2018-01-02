@@ -75,10 +75,11 @@ let g:goyo_linenr = 0
 "indentation
 au BufNewFile,BufRead *.erb set filetype=html
 au BufNewFile,BufRead *.vue set filetype=vue
-autocmd Filetype vue setlocal ts=2 sw=2 expandtab
+autocmd Filetype yaml setlocal ts=2 sw=2 expandtab
+autocmd Filetype css setlocal ts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype html.erb setlocal ts=2 sw=2 expandtab
-autocmd Filetype css setlocal ts=2 sw=2 expandtab
+autocmd Filetype vue setlocal ts=2 sw=2 expandtab
 
 "remaps all
 
