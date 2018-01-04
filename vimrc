@@ -174,10 +174,10 @@ autocmd FileType vue nnoremap <leader>b i<bold></bold><++><Esc>2F<
 autocmd FileType vue nnoremap <leader>d i<div></div><++><Esc>2F<
 
 ""html
-autocmd FileType html nnoremap <leader>h1 i<h1></h1><Esc>2F<i
-autocmd FileType html nnoremap <leader>p i<p></p><Esc>2F<i
+autocmd FileType html nnoremap <leader>h1 i<h1></h1><Esc>F<i
+autocmd FileType html nnoremap <leader>p i<p></p><Esc>F<i
 autocmd FileType html nnoremap <leader>br i</br><Esc>
-autocmd FileType html nnoremap <leader>d i<div></div><Esc>2F<i
+autocmd FileType html nnoremap <leader>d i<div></div><Esc>F<i
 autocmd FileType html nnoremap <leader>dc i<div class=""></div><Esc>F"i
 
 ""erb ruby
