@@ -34,7 +34,7 @@ local prompt_char='$(prompt_char)'
 #function git_prompt_info
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$FG[239]%}on%{$reset_color%} %{$fg[255]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$FG[040]%} | clean | "
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$FG[040]%} | clean |"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$FG[052]%} | repo state:"
 
 #function git_prompt_status
@@ -48,7 +48,7 @@ ZSH_THEME_GIT_PROMPT_DELETED="%{$FG[153]%} deleted |"
 #function git_remote_status - provides equal status
 ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE="%{$FG[052]%}"
 ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE="%{$FG[052]%}"
-ZSH_THEME_GIT_PROMPT_EQUAL_REMOTE="%{$FG[068]%} | up-to-date | "
+ZSH_THEME_GIT_PROMPT_EQUAL_REMOTE="%{$FG[068]%}| up-to-date |"
 
 #function git_commits_ahead
 ZSH_THEME_GIT_COMMITS_AHEAD_PREFIX="%{$FG[023]%} | files to send: "
@@ -61,6 +61,5 @@ ZSH_THEME_GIT_COMMITS_BEHIND_SUFFIX="%{$FG[023]%} |"
 #%{$FG[244]%}║╂┢╪${latex_prompt}
 
 PROMPT="%{$FG[015]%}┏┮══%{$reset_color%} %{$FG[007]%}in%{$reset_color%} %{$terminfo[bold]$FG[130]%}${current_dir}%{$reset_color%}${git_info}%{$reset_color%}
-%{$FG[015]%}║╂┢╪${latex_prompt}
 %{$FG[015]%}╘━━%{$reset_color%}${prompt_char}%{$reset_color%} "
 
