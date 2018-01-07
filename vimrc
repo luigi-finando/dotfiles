@@ -172,6 +172,8 @@ autocmd FileType html nnoremap <leader>br i</br><Esc>
 autocmd FileType html nnoremap <leader>d i<div></div><Esc>F<i
 autocmd FileType html nnoremap <leader>dc i<div class=""></div><Esc>F"i
 autocmd FileType html nnoremap <leader>a i<a href=""></a><Esc>F"i
+autocmd FileType html nnoremap <leader>{ i{{ }}<Esc>2F}hi
+autocmd FileType html nnoremap <leader>{% i{%  %}<Esc>F%hi
 
 ""erb ruby
 autocmd FileType html nnoremap <leader><% i<%<Space>%><Esc>F%
