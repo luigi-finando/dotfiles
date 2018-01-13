@@ -80,6 +80,7 @@ autocmd Filetype css setlocal ts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype html.erb setlocal ts=2 sw=2 expandtab
 autocmd Filetype vue setlocal ts=2 sw=2 expandtab
+autocmd Filetype tex setlocal ts=2 sw=2 expandtab
 
 "remaps all
 
