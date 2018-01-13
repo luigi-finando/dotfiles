@@ -161,7 +161,7 @@ autocmd Filetype tex nnoremap <leader>c i\begin{center}<Enter><++><Enter>\end{ce
 autocmd Filetype tex nnoremap <leader>p i\begin{poem}{}{}{}<Enter><++><Enter>\end{poem}<Enter><++><Esc>3kF\i
 autocmd FileType tex nnoremap <leader>v i\begin{verse}<Enter><++><Enter>\end{verse}<Enter><++><Esc>3kF\i
 
-autocmd FileType tex nnoremap © i\vspace{12pt}\begin{adjustwidth}{4cm}{}<Enter>{\small{\setstretch{0.5}<Enter>.<Enter>\cite[p. <++>]{<++>}\par}}<Enter>\end{adjustwidth}\vspace{12pt}<Esc>2k0xxli
+autocmd FileType tex nnoremap © i\vspace{12pt}\begin{adjustwidth}{4cm}{}<Enter>{\small{\setstretch{1}<Enter>.<Enter>\cite[p. <++>]{<++>}\par}}<Enter>\end{adjustwidth}\vspace{12pt}<Esc>2k0xxli
 
 autocmd FileType tex nnoremap ® i\begin{envromance*}[<++>]<Enter><++><Enter>\end{envromance*}<Esc>2k0
 
