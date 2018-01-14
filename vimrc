@@ -18,12 +18,14 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'posva/vim-vue'
 Plugin 'sirver/UltiSnips'
 Plugin 'tpope/vim-rails'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
+Plugin 'gabrielelana/vim-markdown'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -51,6 +53,10 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 ""vim airline
 let g:airline_theme='base16'
+
+""vim-markdown
+let g:markdown_enable_mappings = 0
+let g:markdown_enable_spell_checking = 0
 
 ""vim markdown-=preview
 let g:vim_markdown_no_default_key_mappings = 0
@@ -80,6 +86,7 @@ autocmd Filetype css setlocal ts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype html.erb setlocal ts=2 sw=2 expandtab
 autocmd Filetype vue setlocal ts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2 expandtab
 
 "remaps all
 
@@ -185,3 +192,10 @@ autocmd FileType vue nnoremap <leader>p i<p></p><++><Esc>2F<
 autocmd FileType vue nnoremap <leader>br i</br><Esc>
 autocmd FileType vue nnoremap <leader>b i<bold></bold><++><Esc>2F<
 autocmd FileType vue nnoremap <leader>d i<div></div><++><Esc>2F<
+
+autocmd FileType js nnoremap <leader>h1 i<h1></h1><Esc>F<i
+autocmd FileType js nnoremap <leader>p i<p></p><Esc>F<i
+autocmd FileType js nnoremap <leader>br i</br><Esc>
+autocmd FileType js nnoremap <leader>d i<div></div><Esc>F<i
+autocmd FileType js nnoremap <leader>dc i<div class=""></div><Esc>F"i
+autocmd FileType js nnoremap <leader>a i<a href=""></a><Esc>F"i
