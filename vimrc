@@ -171,7 +171,7 @@ autocmd FileType tex nnoremap <leader>v i\begin{verse}<Enter><++><Enter>\end{ver
 
 autocmd FileType tex nnoremap © i\vspace{12pt}\begin{adjustwidth}{4cm}{}<Enter>{\small{\setstretch{1}<Enter>.<Enter>\cite[p. <++>]{<++>}\par}}<Enter>\end{adjustwidth}\vspace{12pt}<Esc>2k0xxli
 
-autocmd FileType tex nnoremap ® i\begin{envromance*}[<++>]<Enter><++><Enter>\end{envromance*}<Esc>2k0
+autocmd FileType tex nnoremap ® i\begin{envromance*}{<++>}<Enter><++><Enter>\end{envromance*}<Esc>2k0
 
 ""html
 autocmd FileType html nnoremap <leader>h1 i<h1></h1><Esc>F<i
