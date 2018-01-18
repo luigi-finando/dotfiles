@@ -26,6 +26,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'gabrielelana/vim-markdown'
+Plugin 'chrisbra/csv.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
