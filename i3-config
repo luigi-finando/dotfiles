@@ -38,8 +38,8 @@ bindsym $mod+Shift+r exec --no-startup-id rxvt-unicode -e htop
 bindsym $mod+t exec --no-startup-id transmission-daemon && --no-startup-id rxvt-unicode -e ~/bin/tremc/tremc
 bindsym $mod+Shift+t exec killall transmission-daemon
 
-bindsym $mod+a exec --no-startup-id mupdf -r 80 -C "fffaf0" ~/Tese/tese_main.pdf
-bindsym $mod+Shift+a exec --no-startup-id $HOME/bin/compilartese.sh
+bindsym $mod+a exec --no-startup-id mupdf -r 80 -C "fffaf0" ~/TeseFinal/tese_main.pdf
+bindsym $mod+Shift+a exec --no-startup-id $HOME/TeseFinal/compilartese.sh
 
 ### XF86 keys
 bindsym $mod+XF86AudioPlay exec --no-startup-id rxvt-unicode -e ncmpcpp
@@ -63,18 +63,18 @@ bindsym $mod+XF86MonBrightnessDown exec xbacklight -set 0
 assign [class="(?i)geary"]  email
 assign [class="(?i)Gimp"]  gimp
 
-for_window [class="Nautilus"] floating enable
-for_window [class="Thunar"] floating enable
+#for_window [class="Nautilus"] floating enable
+#for_window [class="Thunar"] floating enable
 for_window [class="(?i)lxappearance"] floating enable
 for_window [class="(?i)gnome-calendar"] floating enable
 for_window [class="(?i)cantata"] floating enable
-for_window [class="(?i)transmission-gtk"] floating enable
+#for_window [class="(?i)transmission-gtk"] floating enable
 for_window [class="Steam"] floating enable
 for_window [title="^ranger$"] floating enable
 for_window [title="^ncmpcpp$"] floating enable
 for_window [title="^calcurse$"] floating enable
 for_window [window_role="page-info"] floating enable
-for_window [class="^Firefox$" window_role="Organizer"] floating enable
+#for_window [class="^Firefox$" window_role="Organizer"] floating enable
 
 ## Basic window and window manager manipulation
 ### z x c v b - window manager
