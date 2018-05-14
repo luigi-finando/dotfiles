@@ -99,7 +99,7 @@ bindsym $mod+x kill
 bindsym $mod+Shift+c restart
 bindsym $mod+Shift+z reload
 bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+period exec "i3-nagbar -t warning -m 'Do you really want to shutdown?' -b 'Yes, exit i3' 'shutdown now'"
+bindsym $mod+Shift+period exec "i3-nagbar -t warning -m 'Do you really want to shutdown?' -b 'Yes' 'shutdown now'"
 
 
 bindsym $mod+u layout stacking
