@@ -17,3 +17,4 @@ ln -s $HOME/dotfiles/mpd.conf $mpddir/mpd.conf
 ln -s $HOME/dotfiles/ncmpcpp.conf $ncmpcppdir/config
 ln -s $HOME/dotfiles/i3-config $i3dir/config
 ln -s $HOME/dotfiles/compton.conf $comptondir/compton.conf
+ln -s $HOME/dotfiles/tmux.conf $HOME/.tmux.conf

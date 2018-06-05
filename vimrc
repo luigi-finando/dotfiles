@@ -42,18 +42,14 @@ syntax on
 set list listchars=tab:→\ ,eol:¬,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 
 set background=dark
-colorscheme tayra
+colorscheme seoul256
 
 map <F5> :setlocal spell! spelllang=pt<CR>
 
 let g:tex_flavor = "latex"
-""snippet (nao sei usar)
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 ""vim airline
-let g:airline_theme='base16'
+let g:airline_theme='bubblegum'
 
 ""vim-markdown
 let g:markdown_enable_mappings = 0
@@ -62,9 +58,6 @@ let g:markdown_enable_spell_checking = 0
 ""vim markdown-=preview
 let g:vim_markdown_no_default_key_mappings = 0
 let g:vim_markdown_folding_disabled = 1
-
-""vim live previwer
-let g:livepreview_previewer = 'mupdf'
 
 ""vim mardown
 let vim_markdown_preview_pandoc=1
@@ -77,7 +70,7 @@ let g:goyo_width = 120
 let g:goyo_height = 85
 let g:goyo_linenr = 0
 
-"let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 'gray'
 
 "indentation
 au BufNewFile,BufRead *.erb set filetype=html
