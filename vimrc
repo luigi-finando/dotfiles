@@ -41,7 +41,7 @@ set mouse=a
 syntax on
 set list listchars=tab:→\ ,eol:¬,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 
-set background=dark
+"set background=dark
 colorscheme seoul256
 
 map <F5> :setlocal spell! spelllang=pt<CR>
