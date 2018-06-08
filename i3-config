@@ -38,8 +38,8 @@ bindsym $mod+Shift+r exec --no-startup-id rxvt-unicode -e htop
 bindsym $mod+t exec --no-startup-id transmission-daemon && --no-startup-id rxvt-unicode -e ~/bin/tremc/tremc
 bindsym $mod+Shift+t exec killall transmission-daemon
 
-bindsym $mod+a exec --no-startup-id mupdf -r 80 -C "fffaf0" ~/TeseFinal/tese_main.pdf
-bindsym $mod+Shift+a exec --no-startup-id $HOME/TeseFinal/compilartese.sh
+bindsym $mod+a exec --no-startup-id rxvt-unicode -e tmuxinator tese
+bindsym $mod+Shift+a exec --no-startup-id mupdf -r 80 -C "fffaf0" ~/TeseFinal/tese_main.pdf
 
 ### XF86 keys
 bindsym $mod+XF86AudioPlay exec --no-startup-id rxvt-unicode -e ncmpcpp
