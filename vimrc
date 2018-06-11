@@ -169,6 +169,7 @@ autocmd FileType tex nnoremap ® i\begin{envromance*}{<++>}<Enter><++><Enter>\en
 
 ""html
 autocmd FileType html nnoremap <leader>h1 i<h1></h1><Esc>F<i
+autocmd FileType html nnoremap <leader>h2 i<h1></h2><Esc>F<i
 autocmd FileType html nnoremap <leader>p i<p></p><Esc>F<i
 autocmd FileType html nnoremap <leader>br i</br><Esc>
 autocmd FileType html nnoremap <leader>d i<div></div><Esc>F<i
@@ -178,8 +179,8 @@ autocmd FileType html nnoremap <leader>{{ i{{ }}<Esc>hi
 autocmd FileType html nnoremap <leader>{% i{%  %}<Esc>hi
 
 ""erb ruby
-autocmd FileType html nnoremap <leader><% i<%<Space>%><Esc>F%
-autocmd FileType html nnoremap <leader><= i<%=<Space>%><Esc>F%
+autocmd FileType html nnoremap <leader><% i<%<Space>%><Esc>F%i
+autocmd FileType html nnoremap <leader><= i<%=<Space>%><Esc>F%i
 
 ""vue
 autocmd FileType vue nnoremap <leader>h1 i<h1></h1><++><Esc>2F<
