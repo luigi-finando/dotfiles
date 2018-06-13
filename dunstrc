@@ -1,5 +1,5 @@
 [global]
-    font = Monaco 10
+    font = Monaco 11
     
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -117,10 +117,10 @@
     separator_height = 2
     
     # Padding between text and separator.
-    padding = 5
+    padding = 10
     
     # Horizontal padding.
-    horizontal_padding = 5
+    horizontal_padding = 10
     
     # Define a color for the separator.
     # possible values are:
@@ -175,13 +175,13 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#292c2e"
-    foreground = "#ffff88"
+    background = "#03000B"
+    foreground = "#EDE0E9"
     timeout = 10
 
 [urgency_normal]
-    background = "#292c2e"
-    foreground = "#ffff88"
+    background = "#03000B"
+    foreground = "#EDE0E9"
     timeout = 10
 
 [urgency_critical]
