@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:Monaco 7
+font pango:Monaco 8
 
 ### startup ###
 exec --no-startup-id xrdb -merge ~/.Xresources
@@ -207,16 +207,16 @@ client.background       #ffffff
 
 bar {
         position top
-	height 23
+	height 25
 	status_command $HOME/dotfiles/i3scripts/custom-i3status.sh
 	colors {
-       		background #292c2e 
-       		statusline #ffff88
-        	separator #666666
+       		background #03000B
+       		statusline #EDE0E9
+        	separator #F4CDD0
 
-        	focused_workspace  #ffff88 #ffff88 #121212
-        	active_workspace   #333333 #5f676a #ffffff
-        	inactive_workspace #292c2e #292c2e #ffff88
+        	focused_workspace  #EDE0E9 #EDE0E9 #121212
+        	active_workspace   #333333 #5f676a #F4CDD0
+        	inactive_workspace #292c2e #292c2e #EDE0E9
         	urgent_workspace   #2f343a #900000 #ffffff
         	binding_mode       #2f343a #900000 #ffffff
     }
