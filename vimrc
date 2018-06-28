@@ -7,7 +7,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'myusuf3/numbers.vim'
-Plugin 'xuhdev/vim-latex-live-preview'
+"Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'lervag/vimtex'
 Plugin 'matze/vim-tex-fold'
 Plugin 'junegunn/goyo.vim'
@@ -20,8 +20,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'posva/vim-vue'
-Plugin 'sirver/UltiSnips'
+"Plugin 'posva/vim-vue'
+"Plugin 'sirver/UltiSnips'
 Plugin 'tpope/vim-rails'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
@@ -33,23 +33,40 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 """general
-filetype on
+filetype plugin on
 set number
 set numberwidth=2
 set mouse=a
+
+""gvim
+set guioptions-=r
+set guioptions-=T
+set guioptions-=m
+set guifont=Ubuntu\Mono\ 14
 
 syntax on
 set list listchars=tab:→\ ,eol:¬,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 
 "set background=dark
-colorscheme seoul256
+colorscheme Tomorrow-Night
+" only good light theme
+"colorscheme autumnleaf
+autocmd BufEnter *.rb colorscheme dracula
+
+autocmd BufEnter *.html colorscheme Dev_Delight
+autocmd BufEnter *.sass colorscheme xoria256
+autocmd BufEnter *.css colorscheme xoria256
+
+autocmd BufEnter *.tex colorscheme darkburn
+autocmd BufEnter *.md colorscheme fruidle
+autocmd BufEnter *.MARKDOWN colorscheme fruidle
 
 map <F5> :setlocal spell! spelllang=pt<CR>
 
 let g:tex_flavor = "latex"
 
 ""vim airline
-let g:airline_theme='bubblegum'
+let g:airline_theme='zenburn'
 
 ""vim-markdown
 let g:markdown_enable_mappings = 0
@@ -76,6 +93,7 @@ let g:limelight_conceal_ctermfg = 'gray'
 au BufNewFile,BufRead *.erb set filetype=html
 au BufNewFile,BufRead *.vue set filetype=vue
 autocmd Filetype yaml setlocal ts=2 sw=2 expandtab
+autocmd Filetype rb setlocal ts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype html.erb setlocal ts=2 sw=2 expandtab
