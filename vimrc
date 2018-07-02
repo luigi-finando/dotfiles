@@ -83,20 +83,19 @@ let vim_markdown_preview_pandoc=1
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
-let g:goyo_width = 120
-let g:goyo_height = 85
+let g:goyo_width = 100
+let g:goyo_height = 60
 let g:goyo_linenr = 0
 
 let g:limelight_conceal_ctermfg = 'gray'
 
 "indentation
-au BufNewFile,BufRead *.erb set filetype=html
 au BufNewFile,BufRead *.vue set filetype=vue
 autocmd Filetype yaml setlocal ts=2 sw=2 expandtab
-autocmd Filetype rb setlocal ts=2 sw=2 expandtab
+autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
-autocmd Filetype html.erb setlocal ts=2 sw=2 expandtab
+autocmd Filetype eruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype vue setlocal ts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype tex setlocal ts=2 sw=2 expandtab
@@ -187,7 +186,7 @@ autocmd FileType tex nnoremap ® i\begin{envromance*}{<++>}<Enter><++><Enter>\en
 
 ""html
 autocmd FileType html nnoremap <leader>h1 i<h1></h1><Esc>F<i
-autocmd FileType html nnoremap <leader>h2 i<h1></h2><Esc>F<i
+autocmd FileType html nnoremap <leader>h2 i<h2></h2><Esc>F<i
 autocmd FileType html nnoremap <leader>p i<p></p><Esc>F<i
 autocmd FileType html nnoremap <leader>br i</br><Esc>
 autocmd FileType html nnoremap <leader>d i<div></div><Esc>F<i
@@ -198,8 +197,17 @@ autocmd FileType html nnoremap <leader>{{ i{{ }}<Esc>hi
 autocmd FileType html nnoremap <leader>{% i{%  %}<Esc>hi
 
 ""erb ruby
-autocmd FileType html nnoremap <leader><% i<%<Space>%><Esc>F%i
-autocmd FileType html nnoremap <leader><= i<%=<Space>%><Esc>F%i
+autocmd FileType eruby nnoremap <leader>% i<%<Space>%><Esc>F%i
+autocmd FileType eruby nnoremap <leader>= i<%=<Space>%><Esc>F%i
+autocmd FileType eruby nnoremap <leader>h1 i<%= content_tag(:h1, <++>) %><Esc>2F<
+autocmd FileType eruby nnoremap <leader>h2 i<%= content_tag(:h2, <++>) %><Esc>2F<
+autocmd FileType eruby nnoremap <leader>p i<%= content_tag(:p, <++>) %><Esc>2F<
+autocmd FileType eruby nnoremap <leader>d i<div></div><Esc>F<i
+autocmd FileType eruby nnoremap <leader>dc i<div class=""></div><Esc>F"i
+autocmd FileType eruby nnoremap <leader>u i<ul><Enter><li><++></li><Enter></ul><Esc>F"i
+autocmd FileType eruby nnoremap <leader>{{ i{{ }}<Esc>hi
+autocmd FileType eruby nnoremap <leader>{% i{%  %}<Esc>hi
+autocmd FileType eruby nnoremap <leader>l i<%= link_to "<++>", <++> %><Esc>4F<
 
 ""vue
 autocmd FileType vue nnoremap <leader>h1 i<h1></h1><++><Esc>2F<
