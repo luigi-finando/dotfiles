@@ -53,7 +53,7 @@ colorscheme Tomorrow-Night
 "colorscheme autumnleaf
 autocmd BufEnter *.rb colorscheme dracula
 
-autocmd BufEnter *.html colorscheme Dev_Delight
+autocmd Filetype html colorscheme kkruby
 autocmd BufEnter *.sass colorscheme xoria256
 autocmd BufEnter *.css colorscheme xoria256
 
