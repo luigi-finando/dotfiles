@@ -54,6 +54,7 @@ ZSH_THEME_GIT_PROMPT_EQUAL_REMOTE="%{$FG[068]%}| up-to-date |"
 ZSH_THEME_GIT_COMMITS_AHEAD_PREFIX="%{$FG[023]%} | files to send: "
 ZSH_THEME_GIT_COMMITS_AHEAD_SUFFIX="%{$FG[023]%} |"
 #function git_commits_behind
+#I run git fetch origin when I cd into the folder
 ZSH_THEME_GIT_COMMITS_BEHIND_PREFIX="%{$FG[023]%} | files to fetch: "
 ZSH_THEME_GIT_COMMITS_BEHIND_SUFFIX="%{$FG[023]%} |"
 

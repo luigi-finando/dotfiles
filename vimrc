@@ -23,6 +23,7 @@ Plugin 'terryma/vim-multiple-cursors'
 "Plugin 'posva/vim-vue'
 "Plugin 'sirver/UltiSnips'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-fugitive'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'gabrielelana/vim-markdown'
@@ -47,6 +48,9 @@ set guifont=Ubuntu\Mono\ 14
 syntax on
 set list listchars=tab:→\ ,eol:¬,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 
+""vim airline
+let g:airline_theme='ubaryd'
+
 "set background=dark
 colorscheme Tomorrow-Night
 " only good light theme
@@ -58,15 +62,13 @@ autocmd BufEnter *.sass colorscheme xoria256
 autocmd BufEnter *.css colorscheme xoria256
 
 autocmd BufEnter *.tex colorscheme darkburn
+autocmd Filetype bib colorscheme sadek1
 autocmd BufEnter *.md colorscheme fruidle
 autocmd BufEnter *.MARKDOWN colorscheme fruidle
 
 map <F5> :setlocal spell! spelllang=pt<CR>
 
 let g:tex_flavor = "latex"
-
-""vim airline
-let g:airline_theme='zenburn'
 
 ""vim-markdown
 let g:markdown_enable_mappings = 0
@@ -147,13 +149,20 @@ inoremap ;' ''<Esc>i
 nnoremap <leader>< bi<<Esc>ea>
 inoremap ;< <><Esc>i
 
+"" snippets caseiros
+"salver selecao
+vnoremap <leader>s :w $HOME/Templates/vim_snippets/
+
+autocmd FileType bib noremap → :-1r $HOME/Templates/vim_snippets/bibitem.bib<CR>
+
+autocmd FileType tex noremap <leader>new :-1r $HOME/Templates/vim_snippets/bibitem.bib<CR>
+
 """bib files
 
 "autocmd FileType bib colorscheme colorsbox-stbright
 "AltGr + i
 autocmd Filetype bib nnoremap ² /@<CR>
 autocmd Filetype bib inoremap ² <Esc>/@<CR>
-autocmd Filetype bib map → i@<++>{<++>,<Enter>author="<++>",<Enter><Esc>>>ititle="<++>",<Enter><Esc>>>iaddress="<++>",<Enter><Esc>>>ipublisher="<++>",<Enter><Esc>>>iyear="<++>",<Enter>}<Esc>kv3k>2k0
 autocmd Filetype bib nnoremap <leader>= i="",<Esc>F"i
 autocmd Filetype bib inoremap ;= ="",<Esc>F"i
 
