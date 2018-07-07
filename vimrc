@@ -150,12 +150,17 @@ nnoremap <leader>< bi<<Esc>ea>
 inoremap ;< <><Esc>i
 
 "" snippets caseiros
-"salver selecao
-vnoremap <leader>s :w $HOME/Templates/vim_snippets/
+"salvar selecao
+vnoremap <leader>s :w $SNIPPET_FOLDER/
+"tab complete para editar snippets
+noremap <leader>snip :tabedit /home/luis/Templates/vim_snippets/
 
-autocmd FileType bib noremap → :-1r $HOME/Templates/vim_snippets/bibitem.bib<CR>
+autocmd FileType bib noremap → :-1r $SNIPPET_FOLDER/bibitem.bib<CR>
 
-autocmd FileType tex noremap <leader>new :-1r $HOME/Templates/vim_snippets/bibitem.bib<CR>
+autocmd FileType tex noremap <leader>new :-1r $SNIPPET_FOLDER/newarticle.tex
+
+autocmd FileType markdown noremap <leader>new :-1r $SNIPPET_FOLDER/markdown_basic.md<CR>
+autocmd FileType markdown noremap <leader>newtex :-1r $SNIPPET_FOLDER/markdown_basic.md<CR>
 
 """bib files
 
