@@ -162,6 +162,8 @@ autocmd FileType tex noremap <leader>new :-1r $SNIPPET_FOLDER/newarticle.tex
 autocmd FileType markdown noremap <leader>new :-1r $SNIPPET_FOLDER/markdown_basic.md<CR>
 autocmd FileType markdown noremap <leader>newtex :-1r $SNIPPET_FOLDER/markdown_basic.md<CR>
 
+autocmd FileType html noremap <leader>newhtml :-1r $SNIPPET_FOLDER/html.html<CR>
+
 """bib files
 
 "autocmd FileType bib colorscheme colorsbox-stbright

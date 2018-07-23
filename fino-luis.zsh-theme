@@ -24,10 +24,18 @@ function latex_prompt {
 	echo " $(latex_pages)$(latex_last_compile)"
 }
 
+function virtual_env {
+	if [ ! -z "$VIRTUAL_ENV" ]; then
+		echo "Py-VENV: $VIRTUAL_ENV"
+	fi
+}
+
 local latex_prompt='$(latex_prompt)'
 local current_dir='${PWD/#$HOME/~}'
 local git_info='$(git_prompt_info)$(git_prompt_status)$(git_remote_status)$(git_commits_ahead)$(git_commits_behind)'
 local prompt_char='$(prompt_char)'
+
+local virtual_env='$(virtual_env)'
 
 #information useful to sync my thesis in Latex to git repo
 #I don't branch and I'd like detailed information on remote|local differences and types of changes
@@ -61,6 +69,6 @@ ZSH_THEME_GIT_COMMITS_BEHIND_SUFFIX="%{$FG[023]%} |"
 #Paste this line in the middle to have the Latex prompt
 #%{$FG[244]%}║╂┢╪${latex_prompt}
 
-PROMPT="%{$FG[244]%}┏┮══%{$reset_color%} %{$FG[007]%}in%{$reset_color%} %{$terminfo[bold]$FG[130]%}${current_dir}%{$reset_color%}${git_info}%{$reset_color%}
+PROMPT="%{$FG[244]%}┏┮══%{$reset_color%} %{$FG[138]%}$virtual_env%{$reset_color%} %{$FG[007]%}in%{$reset_color%} %{$terminfo[bold]$FG[130]%}${current_dir}%{$reset_color%}${git_info}%{$reset_color%}
 %{$FG[244]%}╘━━%{$reset_color%}${prompt_char}%{$reset_color%} "
 
