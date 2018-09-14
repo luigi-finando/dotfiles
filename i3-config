@@ -48,11 +48,11 @@ bindsym XF86AudioPlay exec --no-startup-id mpc toggle
 bindsym XF86AudioPrev exec --no-startup-id mpc prev
 bindsym XF86AudioNext exec --no-startup-id mpc next
 
-bindsym XF86AudioMute exec amixer -D pulse sset Master toggle
-bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%-
-bindsym $mod+XF86AudioLowerVolume exec amixer -D pulse sset Master 0%
-bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
-bindsym $mod+XF86AudioRaiseVolume exec amixer -D pulse sset Master 100%
+bindsym XF86AudioMute exec pactl set-sink-mute 1 toggle
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -5%
+bindsym $mod+XF86AudioLowerVolume exec pactl set-sink-volume 1 5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +5%
+bindsym $mod+XF86AudioRaiseVolume exec pactl set-sink-volume 1 100%
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym $mod+XF86MonBrightnessUp exec xbacklight -set 100
