@@ -18,7 +18,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
-Plugin 'JamshedVesuna/vim-markdown-preview'
+"Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'terryma/vim-multiple-cursors'
 "Plugin 'posva/vim-vue'
 "Plugin 'sirver/UltiSnips'
@@ -26,7 +26,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
-Plugin 'gabrielelana/vim-markdown'
+"Plugin 'gabrielelana/vim-markdown'
 Plugin 'chrisbra/csv.vim'
 
 " All of your Plugins must be added before the following line
@@ -117,8 +117,8 @@ nmap ŋ :Goyo<CR>
 imap ŋ <Esc>:Goyo<CR>i
 
 "AltGr+\
-nmap º :NERDTreeToggle<CR>
-imap º <Esc>:NERDTreeToggle<CR>
+"nmap º :NERDTreeToggle<CR>
+"imap º <Esc>:NERDTreeToggle<CR>
 
 nnoremap <Up> gk
 nnoremap <Down> gj
@@ -163,6 +163,8 @@ autocmd FileType markdown noremap <leader>new :-1r $SNIPPET_FOLDER/markdown_basi
 autocmd FileType markdown noremap <leader>newtex :-1r $SNIPPET_FOLDER/markdown_basic.md<CR>
 
 autocmd FileType html noremap <leader>newhtml :-1r $SNIPPET_FOLDER/html.html<CR>
+autocmd FileType html noremap <leader>htmlt :-1r $SNIPPET_FOLDER/table.html<CR>
+autocmd FileType eruby noremap <leader>ht :-1r $SNIPPET_FOLDER/table.html<CR>
 
 """bib files
 
