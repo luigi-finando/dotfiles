@@ -101,6 +101,7 @@ autocmd Filetype eruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype vue setlocal ts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype tex setlocal ts=2 sw=2 expandtab
+autocmd Filetype py setlocal ts=4 sw=4 expandtab
 
 "remaps all
 
