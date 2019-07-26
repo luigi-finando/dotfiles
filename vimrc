@@ -55,16 +55,16 @@ let g:airline_theme='ubaryd'
 colorscheme xoria256
 " only good light theme
 "colorscheme autumnleaf
-autocmd BufEnter *.rb colorscheme dracula
-
-autocmd Filetype html colorscheme kkruby
-autocmd BufEnter *.sass colorscheme xoria256
-autocmd BufEnter *.css colorscheme xoria256
-
-autocmd BufEnter *.tex colorscheme darkburn
-autocmd Filetype bib colorscheme sadek1
-autocmd BufEnter *.md colorscheme fruidle
-autocmd BufEnter *.MARKDOWN colorscheme fruidle
+"utocmd BufEnter *.rb colorscheme dracula
+"
+"utocmd Filetype html colorscheme kkruby
+"utocmd BufEnter *.sass colorscheme xoria256
+"utocmd BufEnter *.css colorscheme xoria256
+"
+"utocmd BufEnter *.tex colorscheme darkburn
+"utocmd Filetype bib colorscheme sadek1
+"utocmd BufEnter *.md colorscheme fruidle
+"utocmd BufEnter *.MARKDOWN colorscheme fruidle
 
 map <F5> :setlocal spell! spelllang=pt<CR>
 
