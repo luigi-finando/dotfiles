@@ -52,19 +52,19 @@ set list listchars=tab:→\ ,eol:¬,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 let g:airline_theme='ubaryd'
 
 "set background=dark
-colorscheme Tomorrow-Night
+colorscheme xoria256
 " only good light theme
 "colorscheme autumnleaf
-autocmd BufEnter *.rb colorscheme dracula
-
-autocmd Filetype html colorscheme kkruby
-autocmd BufEnter *.sass colorscheme xoria256
-autocmd BufEnter *.css colorscheme xoria256
-
-autocmd BufEnter *.tex colorscheme darkburn
-autocmd Filetype bib colorscheme sadek1
-autocmd BufEnter *.md colorscheme fruidle
-autocmd BufEnter *.MARKDOWN colorscheme fruidle
+"utocmd BufEnter *.rb colorscheme dracula
+"
+"utocmd Filetype html colorscheme kkruby
+"utocmd BufEnter *.sass colorscheme xoria256
+"utocmd BufEnter *.css colorscheme xoria256
+"
+"utocmd BufEnter *.tex colorscheme darkburn
+"utocmd Filetype bib colorscheme sadek1
+"utocmd BufEnter *.md colorscheme fruidle
+"utocmd BufEnter *.MARKDOWN colorscheme fruidle
 
 map <F5> :setlocal spell! spelllang=pt<CR>
 
@@ -102,7 +102,7 @@ autocmd Filetype eruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype vue setlocal ts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd Filetype tex setlocal ts=2 sw=2 expandtab
-autocmd Filetype py setlocal ts=4 sw=4 expandtab
+autocmd Filetype py setlocal ts=2 sw=2 expandtab
 
 "remaps all
 
@@ -158,7 +158,6 @@ vnoremap <leader>s :w $SNIPPET_FOLDER/
 noremap <leader>snip :tabedit /home/luis/Templates/vim_snippets/
 
 autocmd FileType bib noremap → :-1r $SNIPPET_FOLDER/bibitem.bib<CR>
-
 autocmd FileType tex noremap <leader>new :-1r $SNIPPET_FOLDER/newarticle.tex
 
 autocmd FileType markdown noremap <leader>new :-1r $SNIPPET_FOLDER/markdown_basic.md<CR>
