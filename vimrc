@@ -93,6 +93,7 @@ let g:limelight_conceal_ctermfg = 'gray'
 
 "indentation
 au BufNewFile,BufRead *.vue set filetype=vue
+autocmd Filetype htmldjango set filetype=html
 autocmd Filetype yaml setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
@@ -209,7 +210,7 @@ autocmd FileType html nnoremap <leader>p i<p></p><Esc>F<i
 autocmd FileType html nnoremap <leader>br i</br><Esc>
 autocmd FileType html nnoremap <leader>d i<div></div><Esc>F<i
 autocmd FileType html nnoremap <leader>dc i<div class=""></div><Esc>F"i
-autocmd FileType html nnoremap <leader>u i<ul><Enter><li><++></li><Enter></ul><Esc>F"i
+autocmd FileType html nnoremap <leader>l i<ul><Enter><li><++></li><Enter></ul><Esc>F"i
 autocmd FileType html nnoremap <leader>a i<a href=""></a><Esc>F"i
 autocmd FileType html nnoremap <leader>{{ i{{ }}<Esc>hi
 autocmd FileType html nnoremap <leader>{% i{%  %}<Esc>hi
