@@ -157,7 +157,9 @@ vnoremap <leader>s :w $SNIPPET_FOLDER/
 "tab complete para editar snippets
 noremap <leader>snip :tabedit /home/luis/Templates/vim_snippets/
 
-autocmd FileType bib noremap → :-1r $SNIPPET_FOLDER/bibitem.bib<CR>
+autocmd FileType bib nnoremap <leader>book :-1r $SNIPPET_FOLDER/book.bib<CR>
+autocmd FileType bib nnoremap <leader>art :-1r $SNIPPET_FOLDER/artigo.bib<CR>
+
 autocmd FileType tex noremap <leader>new :-1r $SNIPPET_FOLDER/newarticle.tex
 
 autocmd FileType markdown noremap <leader>new :-1r $SNIPPET_FOLDER/markdown_basic.md<CR>
@@ -171,10 +173,6 @@ autocmd FileType eruby noremap <leader>ht :-1r $SNIPPET_FOLDER/table.html<CR>
 
 "autocmd FileType bib colorscheme colorsbox-stbright
 "AltGr + i
-autocmd Filetype bib nnoremap ² /@<CR>
-autocmd Filetype bib inoremap ² <Esc>/@<CR>
-autocmd Filetype bib nnoremap <leader>= i="",<Esc>F"i
-autocmd Filetype bib inoremap ;= ="",<Esc>F"i
 
 "tex files
 
