@@ -163,10 +163,9 @@ autocmd FileType bib nnoremap <leader>art :-1r $SNIPPET_FOLDER/artigo.bib<CR>
 autocmd FileType tex noremap <leader>new :-1r $SNIPPET_FOLDER/newarticle.tex
 
 autocmd FileType markdown noremap <leader>new :-1r $SNIPPET_FOLDER/markdown_basic.md<CR>
-autocmd FileType markdown noremap <leader>newtex :-1r $SNIPPET_FOLDER/markdown_basic.md<CR>
 
-autocmd FileType html noremap <leader>newhtml :-1r $SNIPPET_FOLDER/html.html<CR>
-autocmd FileType html noremap <leader>htmlt :-1r $SNIPPET_FOLDER/table.html<CR>
+autocmd FileType html noremap <leader>new :-1r $SNIPPET_FOLDER/html.html<CR>
+autocmd FileType html noremap <leader>table :-1r $SNIPPET_FOLDER/table.html<CR>
 autocmd FileType eruby noremap <leader>ht :-1r $SNIPPET_FOLDER/table.html<CR>
 
 """bib files
@@ -205,11 +204,18 @@ autocmd FileType tex nnoremap ® i\begin{envromance*}{<++>}<Enter><++><Enter>\en
 autocmd FileType html nnoremap <leader>h1 i<h1></h1><Esc>F<i
 autocmd FileType html nnoremap <leader>h2 i<h2></h2><Esc>F<i
 autocmd FileType html nnoremap <leader>p i<p></p><Esc>F<i
+autocmd FileType html nnoremap <leader>bold i<b></b><Esc>F<i
+autocmd FileType html nnoremap <leader>it i<i></i><Esc>F<i
+autocmd FileType html nnoremap <leader>big i<big></big><Esc>F<i
+autocmd FileType html nnoremap <leader>sm i<small></small><Esc>F<i
 autocmd FileType html nnoremap <leader>br i</br><Esc>
+
 autocmd FileType html nnoremap <leader>d i<div></div><Esc>F<i
 autocmd FileType html nnoremap <leader>dc i<div class=""></div><Esc>F"i
 autocmd FileType html nnoremap <leader>l i<ul><Enter><li><++></li><Enter></ul><Esc>F"i
 autocmd FileType html nnoremap <leader>a i<a href=""></a><Esc>F"i
+autocmd FileType html nnoremap <leader>img i<img src=""><Esc>F"i
+
 autocmd FileType html nnoremap <leader>{{ i{{ }}<Esc>hi
 autocmd FileType html nnoremap <leader>{% i{%  %}<Esc>hi
 
